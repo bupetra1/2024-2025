@@ -1,0 +1,213 @@
+1. A felsorolt böngészők közül melyik/melyek szabad és nyílt forrású szoftver(ek)? Válasszon ki egyet vagy többet:
+    - Chromium, Opera, Google Chrome, Safari, Firefox
+2. Melyik szervezet adminisztrálja a HTTP állapotkódokat? Válasszon ki egyet:
+    -W3C, WHATWG, IETF, IANA
+3. Mi annak az URI sémának a neve, melyet széles körben használnak a böngészők ahhoz, hogy hozzáférést adjanak a belső erőforrásaikhoz,
+   mint például a beállítások, alkalmazás információk vagy rejtett beépített funkciók? Válasz:
+4. Eredete szerint a szabványok melyik fajtájához tartozik a HTTP/1.1? Válasszon ki egyet:
+    - De facto, Önkéntes közmegegyezéses, De jure
+5. Az alábbiak közül melyik igaz az XML dokumentumokra? Válasszon ki egyet:
+    - A jólformáltság és az érvényesség kölcsönösen kizárják egymást.
+    - A jólformáltság maga után vonja az érvényességet.
+    - Az érvényesség maga után vonja a jólformáltságot.
+    - A jólformáltság és az érvényesség egymástól teljesen függetlenek.
+6. A felsoroltak közül melyik nem egy süti attribútum? Válasszon ki egyet:
+    - No-Store, HttpOnly, Domain, Max-Age
+7. Mi az Unicode kódtér lehetséges legnagyobb kódpontja? Válasszon ki egyet:
+    - FFFFFF_16, FFFF FFFF_16, 10FFFF_16, FFFF_16
+8. Funkciójukat tekintve a szoftverek mely csoportjába tartoznak a Jetty, Microsoft IIS és Nginx?
+    - Webszerver, JavaScript motor, Böngészőmotor, HTTP kliens
+9. A DTD-ben deklarált elemek közül melyik lehet gyökérelem? Válasszon ki egyet:
+    - A sorrendben elsőként deklarált elem.
+    - Bármelyik.
+    - Csak speciálisan gyökérelemet deklaráltak.
+    - Bármely felső szintű elem, azaz minden olyan elem, mely nem fordul elő a DTD-n belül más elemek tartalommodelljét megadó
+      kifejezésben.
+10. Tegyük fel, hogy a 
+    div:first-child {color: green; }
+    div:nth-child(1) {color: red; }
+    div:nth-child(odd) {color: blue; }
+    CSS szabályok vonatkoznak egy div elemre. Milyen színű lesz az elem szövege? Válasszon ki egyet:
+      - Piros (red), Kék (blue), Zöld (green), A válasz böngészőfüggő.
+11. Az alábbi elemtípus deklarációk közül melyik deklarálja azt az a elemet, mely 0 vagy több olyan elemgyereket kell, hogy
+    tartalmazzon, melyek bármelyike egy x vagy egy y elem lehet, az x és y elemek pedig tetszőleges sorrendben adhatóak meg.
+    Válasszon egyet:
+      - <!ELEMENT a (x^* | y^*)>
+      - <!ELEMENT a (x^*, y^*)>
+      - <!ELEMENT a (x, y)^*>
+      - <!ELEMENT a (x | y)^*>
+12. Helyes az alábbi CSS szabályok sorrendje?
+    body { ... }
+    @media (min-width: 1240px) {
+        body { ... }
+    }
+    Válasszon ki egyet:
+      - A válasz a rendelő motortól függ.
+      - Nem, mivel a @media at-szabályokat a stíluslap legelején kötelező megadni.
+      - Nem, a megfelelő működéshez fel kell cserélni a két @media at-szabályt.
+      - Igen, mivel általánosan igaz, hogy nem számít a @media at-szabályok sorrendje.
+13. A HTTP/3 a QUC átviteli protokollon alapul. Melyik protokollra épül a QUIC? Válasszon ki egyet:
+      - SPDY, UDP, XMPP, TCP
+14. Párosítsd az Unicode karakterkódolásokat a jellemzőikkel.
+    A használt byte-ok számának tekintetében a legtömörebb kódolás. (utf-8/utf-16/utf-32)
+    A legegyszerűbb karakterkódolás. (utf-8/utf-16/utf-32)
+    Kompromisszumot képvisel a hatékony hozzáférés és a hatékony tárhasználat között. (utf-8/utf-16/utf-32)
+15. Melyik JSON érték érvényes példánya az alábbi JSON sémának? Több lehetőség is megjelölhető, csak a tökéletes válasz ér pontot.
+    {
+        "type": "object",
+        "propeties": {
+            "firstName": { "type": "string" },
+            "middleName": { "type": "string" },
+            "lastName": { "type": "string" },
+        }
+        "required": ["firstName", "lastName"],
+        "additionalProperties": true
+    }
+    Válasszon ki egyet vagy többet:
+      a)
+      {
+          "firstName": "Arthur",
+          "middleName": "Conan",
+          "lastName": "Doyle",
+      }
+      b)
+      {
+          "lastName": "Doyle",
+          "firstName": "Arthur"          
+      }
+      c)
+      {
+          "firstName": "Arthur",
+          "lastName": "Doyle",
+          "title": "Sir"
+      }
+      d)
+      {
+          "firstName": "Arthur"
+      }
+16. Párosítsd az indok frázisokat a nekik megfelelő HTTP állapotkódokkal
+    - 301, 503, 100, 401, 201
+17. Párosítsa a kiválasztókat a fajtájukkal.
+    - :root, *, #toc, .line
+18. Milyen kimenetet állít elő egy Sass fordító az alábbi SCSS kódból?
+    footer {
+        p {font-size: small;}
+    }
+    Válasszon ki egyet:
+      - footer > p {fon-size: small;}
+      - footer p {font-size: small;}
+      - Az eredmény a Sass fordító konfigurációs beállításaitól függ.
+      - Az eredmény hiba, mivel szabályok csak a behúzott szintaxisban ágyazhatók egymásba.
+19. Melyik állítás igaz az alábbi dokumentumra?
+    <?xml version="1.0"?>
+    <title>The Fellowship of the Ring</title>
+    <title>The Two Towers</title>
+    <title>The Return of the King</title>
+    Válasszon ki egyet:
+      - Jólformált, de nem érvényes XML dokumentum
+      - Ez nem XML dokumentum
+      - Érvényes, de nem jól formált XML dokumentum
+      - Jólformált és érvényes XML dokumentum
+20. Milyen kimenetet állít elő egy Sass fordító az alábbi SCSS kódból?
+    h2 {color: indigo}
+    h1 {@extend h2}
+    Válasszon ki egyet:
+      - h2 { color: indigo } h1 { color: indigo }
+      - h2 h1 { color: indigo }
+      - h2, h1 { color: indigo }
+      - h2 + h1 { color: indigo }
+21. A CSS-ben az abszolút hosszúság mértékegységek egyike egy fizikai mértékegységhez van kötve és az összes többi ehhez
+    viszonyítva definiált. Magyarázza el, hogyan történik ennek a kitüntetett mértékegységnek a választása.
+    * Kis pixelsűrűségű eszközöknél ... ajánlott kötni a többi mértékegységet.
+    * Nagy pixelsűrűségű eszközöknél ... ajánlott kötni a többi mértékegységet.
+22. Mi az s relatív hivatkozás feloldásának eredménye, ha http://foo/p/q/r a bázis-URI?
+23. Melyik állítás igaz az alábbiak közül? Válasszon ki egyet:
+    - A JSON az ECMAScript szintaxisán alapul és teljesen kompatibilis vele.
+    - A JSON az ECMAScript szintaxisán alapul, de nem teljesen kompatibilis vele.
+    - A másik három állítás egyike sem igaz.
+    - A JSON az ECMAScript kiterjesztése.
+24. Alább egy HTTP kérés/válasz váltás látható:
+    > GET /licenses/gpl.txt HTTP/1.1
+    > Host: www.gnu.org
+    > User-Agent: curl/7.61.0
+    > Accept: */*
+    > If-None-Match: "894d-55a62eb645dcd"
+    > HTTP/1.1 304 Not Modified
+    > Date: Thu, 23 Aug 2018 05:50:57 GMT
+    > Server: Apache/2.4.7
+    > ETag: "894d-55a62eb645dcd"
+    >
+    < HTTP/1.1 304 Not Modified
+    < Date: Thu, 23 Aug 2018 05:50:57 GMT
+    < Server: Apache/2.4.7
+    < ETag: "894d-55a62eb645dcd"
+    <
+    Milyen kérésnek nevezik a fenti kérést? Egyetlen szót adjon meg válaszként! (A válasz nem GET!)
+25. Mely elemeket választja ki a p:first-child CSS kiválasztó? Válasszon ki egyet:
+      - Minden olyan p elemet, mely szülőjének első gyermeke.
+      - Minden egyes p:first-child nevű XML elemet (a p:first-child érvényes elemnév egy XML dokumentumbam).
+      - Minden egyes p elem első elemgyermekét.
+      - Olyan p elemet, mely a dokumentum gyökérelemének első gyermeke.
+26. Számozd az alábbi CSS kiválasztókat 1-től 4-ig specifikusság szerint növekvő sorrendben:
+      - * + * + *
+      - #notice
+      - p > a
+      - .deprecated
+27. Tekintsük az alábbi HTML dokumentumrészletet:
+    <table>
+        <caption>James Bond</caption>
+        <tr>
+            <th>Születés:</th>
+            <td>1920. november 11., Wattenscheid</td>
+        </tr>
+    </table>
+    A következő CSS kiválasztók közül melyikre illeszkedik a th elem? Válasszon ki egyet:
+        - caption + * : first-child
+        - th + td
+        - tr + th
+        - tr: first-child
+28. Válassza ki, hogy melyik vektor a 
+    #album ol.tracks li:first-child::before
+    CSS kiválasztó specifikussága! Válasszon ki egyet
+      - (1, 2, 3)
+      - (1, 3, 2)
+      - (1, 2, 2)
+      - (1, 1, 4)
+29. Milyen jelzővel illetik azokat a csomópontokat az RDF-ben, melyek olyan erőforrásokat jelölnek, melyeket nem
+    nevezünk meg explicit módon egy IRI-vel? Egyetlen szót adjon meg válaszként!
+30. Hogyan adható meg URI útvonal komponensében a #karakter, melynek Unicode kódpontja U+0023? Válasszon ki egyet:
+      - \#, %23, \0023, &#x23;
+31. Az alábbiak közül mely elem(ek) révén adható meg HTML dokumentumokban hiperlink?
+    Válasszon ki egyet vagy többet:
+      - href attribútummal rendelkező tetszőleges szövegközi elemmel
+      - <link>
+      - <address>
+      - <a>
+32. Hogyan deklarálható üresként a DTD-ben az e elem? Válasszon ki egyet:
+      - <!ELEMENT e (EMPTY)>
+      - <!ELEMENT e (#EMPTY)>
+      - <!ELEMENT e>
+      - <!ELEMENT e EMPTY>
+33. Az alábbiak közül melyik nem egy felső szintű IANA média típus? Válasszon ki egyet:
+      - message
+      - multipart
+      - model
+      - data
+34. Az alábbiak közül melyik nem egy JSON sztring?
+      - "&x20"
+      - 'OK'
+      - "\"Hello, World!\n\""
+      - "\u263A"
+35. Az alábbiak közül melyik nem érvényes a HTML5 HTML szintaxisában? Válasszon ki egyet:
+      - <code> <:-| </code>
+      - Egyik sem
+      - <input type=checkbox checked/>
+      - <H2>Contents</h2>
+      - <ul><li>Gryffindor</ul>
+36. Milyen jelzővel illetik az Expires vagy Max-Age attribútummal rendelkező sütiket, melyeket a felhasználói
+    ágens több munkameneten keresztül megtarthat? Egyetlen szót adjon meg válaszként.
+37. Melyek a JSON és az XML közös jellemzői? Csak a tökéletes válasz ér pontot.
+      - Szoftverek által könnyen generálható és feldolgozható formátumok
+      - ISO szabványként is léteznek
+      - Univerzális adatcsere formátumok
+      - Mindkettő jelölőnyelv
