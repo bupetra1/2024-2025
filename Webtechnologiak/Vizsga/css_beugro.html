@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>CSS kiv&aacute;laszt&oacute;k</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h1 id="css-kiválasztók">CSS kiválasztók</h1>
+<p><strong>A CSS kiválasztók mintaillesztésre szolgálnak. Meghatározzák, hogy egy szabály mely elemekre vonatkozik.</strong></p>
+<p>Kisbetű-nagybetű éréketlenség az ASCII tartományban (ekvivalensek az [a-z] és [A-Z] karakterek) az olyan részek kivételével, melyek nem a CSS hatálya alá esnek (elemnevek, attribútumnevek és -értékek).</p>
+<blockquote>
+<p><strong>Egyszerű kiválasztó</strong></p>
+<p>Egyetlen típus kiválasztó, általános kiválasztó, attribútum kiválasztó, osztály kiválasztó, ID-kiválasztó vagy pszeudo-osztály.</p>
+<pre><code class="language-css"><span class="hljs-selector-tag">div</span> - általános kiválasztó
+<span class="hljs-selector-attr">[rel=stylesheet]</span> - attribútum kiválasztó
+<span class="hljs-selector-class">.copyright</span> - <span class="hljs-selector-tag">HTML</span> osztály kiválasztó
+<span class="hljs-selector-id">#logo</span> - ID kiválasztó
+<span class="hljs-selector-pseudo">:lang</span>(hu) - Pszeudo osztály kiválasztó
+</code></pre>
+</blockquote>
+<blockquote>
+<p><strong>Kombinátor</strong></p>
+<p>Egy CSS-kiválasztó több egyszerű kiválasztót is tartalmazhat. Az egyszerű kiválasztók közé kombinátort kell beépíteni.</p>
+<pre><code>whitespace - leszármazott kombinátor
+'&gt;' - Gyermek kombinátor
+'+' - Szomszéd testvér kombinátor
+'~' - Általános kombinátor
+</code></pre>
+</blockquote>
+<blockquote>
+<p><strong>Egyszerű kiválasztók sorozata</strong></p>
+<p>Egymást követő egyszerű kiválasztók, melyek között nincsenek kombinátorok.
+Típus kiválasztóval vagy általános kiválasztóval kezdődnek és nem tartalmaznak további típus kiválasztókat vagy általános kiválasztókat.</p>
+<pre><code class="language-css"><span class="hljs-selector-tag">div</span>
+<span class="hljs-selector-tag">h2</span><span class="hljs-selector-id">#status</span>
+link<span class="hljs-selector-attr">[rel=stylesheet]</span><span class="hljs-selector-attr">[type=text/css]</span>
+<span class="hljs-selector-tag">p</span><span class="hljs-selector-class">.copyrigth</span>
+*lang(hu) - *:univerzális kiválasztó
+tr:<span class="hljs-built_in">nth-child</span>(odd)
+li:<span class="hljs-built_in">not</span>(:last-child)
+</code></pre>
+</blockquote>
+<blockquote>
+<p><strong>Kiválasztó</strong></p>
+<p>Egyszerű kiválasztók sorozatainak olyan sorozata, melyeket kombinátorok választanak el. Legalább egy sorozat alkotja.
+Pszeudo-elem at utolsó egyszerű kiválasztó sorozat végéhez adható hozzá, de legfeljebb csak egy!</p>
+<pre><code class="language-css"><span class="hljs-selector-tag">p</span> - <span class="hljs-number">1</span> szekvencia bekezdés
+<span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">img</span> - olyan <span class="hljs-selector-tag">img</span> elem ami leszármazottja <span class="hljs-selector-tag">a</span>-nak
+<span class="hljs-selector-tag">h1</span> ~ <span class="hljs-selector-tag">table</span> - ugyanahhoz <span class="hljs-selector-tag">a</span> szülőhöz tartoznak
+<span class="hljs-selector-tag">div</span><span class="hljs-selector-id">#main</span> &gt; <span class="hljs-selector-tag">h1</span> - <span class="hljs-selector-tag">h1</span> gyermeke <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">div</span><span class="hljs-selector-id">#main-nek</span>
+<span class="hljs-selector-tag">div</span> &gt; <span class="hljs-selector-tag">h1</span> + <span class="hljs-selector-tag">p</span>
+<span class="hljs-selector-tag">q</span><span class="hljs-selector-pseudo">::before</span>
+</code></pre>
+</blockquote>
+<h2 id="kombinátor">Kombinátor</h2>
+<h3 id="leszármazott-kombinátor">Leszármazott kombinátor</h3>
+<p><strong>Egyszerű kiválasztók két sorozatát elválasztó whitespace.</strong></p>
+<p>Ha P és Q egyszerű kiválasztók két sorozata, akkor a P Q kiválasztóra a Q-ra illeszkedő olyan elemek illeszkednek, <em>melyek a P-re illeszkedő elem leszármazottai</em>.</p>
+<pre><code class="language-css"><span class="hljs-selector-tag">thead</span> <span class="hljs-selector-tag">th</span> {
+    <span class="hljs-attribute">background-color</span>: darkgrey;
+}
+</code></pre>
+<h3 id="gyermek-kombinátor">Gyermek kombinátor</h3>
+<p><strong>Egyszerű kiválasztók két sorozatát elválasztó '&gt;' karakter.</strong></p>
+<p>Ha P és Q egyszerű kiválasztók két sorozata, akkor a P &gt; Q kiválasztóra a Q-ra illeszkedő olyan elemek illeszkednek, <em>melyek a P-re illeszkedő elemek gyermekei.</em></p>
+<pre><code class="language-css"><span class="hljs-selector-tag">nav</span> &gt; <span class="hljs-selector-tag">div</span> {
+    <span class="hljs-attribute">display</span>: inline;
+}
+<span class="hljs-selector-tag">p</span> &gt; <span class="hljs-selector-tag">img</span><span class="hljs-selector-pseudo">:only-child</span> {
+    <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">0</span>;
+}
+</code></pre>
+<h3 id="szomszéd-testvér-kombinátor">Szomszéd testvér kombinátor</h3>
+<p><strong>Egyszerű kiválasztók két sorozatát elválasztó '+' karakter.</strong></p>
+<p>Ha P és Q egyszerű kiválasztók két sorozata, akkor a P + Q kiválasztóra a Q-ra illeszkedő olyan elemek illeszkednek, <em>melyek a P-re illeszkedő elemet követnek közvetlenül</em> a dokumentumban.</p>
+<ul>
+<li>Az illeszkedő elemeknek ugyanaz kell, hogy legyen a szülője.</li>
+<li>Közöttük megengedettek olyan konstrukciók, melyek nem elemek, például szöveg és megjegyzések, ezek figyelmen kívül hagyása.</li>
+</ul>
+<pre><code class="language-css"><span class="hljs-selector-tag">h1</span> + <span class="hljs-selector-tag">p</span> {
+    <span class="hljs-attribute">text-indent</span>: <span class="hljs-number">0</span>;
+}
+</code></pre>
+<h3 id="általános-testvér-kombinátor-css3">Általános testvér kombinátor (CSS3)</h3>
+<p><strong>Egyszerű kiválasztók két sorozatát elválasztó '-' karakter.</strong></p>
+<p>Ha P és Q egyszerű kiválasztók két sorozata, akkor a P ~ Q kiválasztóra a Q-ra illeszkedő olyan elemek illeszkednek, <em>melyek a P-re illeszkedő elemet követnek (nem felétlenül) közvetlenül</em> a dokumentumban.</p>
+<ul>
+<li>Az illeszkedő elemeknek ugyanaz kell, hogy legyen a szülője.</li>
+</ul>
+<pre><code class="language-css"><span class="hljs-selector-tag">img</span> ~ <span class="hljs-selector-tag">span</span> {
+    <span class="hljs-attribute">color</span>: red;
+}
+</code></pre>
+<h2 id="kiválasztók-típusai">Kiválasztók típusai</h2>
+<h3 id="típus-kiválasztó">Típus kiválasztó</h3>
+<p>Egy CSS minősített név, a gyakorlatban tipikusan egy azonosító. A megfelelő nevű elemek illeszkednek rá.</p>
+<pre><code class="language-css"><span class="hljs-selector-tag">p</span> {<span class="hljs-attribute">color</span>: red } - <span class="hljs-selector-tag">A</span> <span class="hljs-selector-tag">p</span> elemek színe legyen piros
+<span class="hljs-selector-tag">a</span> { <span class="hljs-attribute">text-decoration</span>: none} - Ha az elem link, akkor nem lesz aláhúzva
+</code></pre>
+<h3 id="általános-kiválasztó">Általános kiválasztó</h3>
+<p>Általános kiválasztónak nevezzük a * formájú kiválasztót.
+Minden elem illeszkedik rá.
+Elhagyható olyan egyszerű kiválasztóból, mely további komponenseket is tartalmaz.</p>
+<blockquote>
+<p><strong>Ekvivalens kiválasztók</strong></p>
+<pre><code class="language-css">*<span class="hljs-selector-id">#nav</span> = <span class="hljs-selector-id">#nav</span>
+*<span class="hljs-selector-class">.important</span> = <span class="hljs-selector-class">.important</span>
+*<span class="hljs-selector-attr">[title]</span> = <span class="hljs-selector-attr">[title]</span>
+</code></pre>
+</blockquote>
+<blockquote>
+<p><strong>Nem ajánlott elhagyni, az olvashatóság végett</strong></p>
+<pre><code class="language-css"><span class="hljs-selector-tag">div</span> *<span class="hljs-selector-pseudo">:first</span>-child = <span class="hljs-selector-tag">div</span> <span class="hljs-selector-pseudo">:first</span>-child
+<span class="hljs-selector-tag">div</span> *: first-child != div:first-child
+</code></pre>
+</blockquote>
+<h3 id="attribútum-kiválasztók">Attribútum kiválasztók</h3>
+<blockquote>
+<p><strong>[att]</strong>: az att attribútummal rendelkező elemek illeszkednek rá</p>
+</blockquote>
+<blockquote>
+<p><strong>[att=érték]</strong>: olyan elemek illeszkednek rá, melyek att attribútumának értéke pontosan érték</p>
+<pre><code class="language-css">style<span class="hljs-selector-attr">[type=italic]</span> {
+   <span class="hljs-attribute">font-style</span>: italic;
+}
+style<span class="hljs-selector-attr">[type=bold]</span> {
+   <span class="hljs-attribute">font-weight</span>: bold;
+}
+style<span class="hljs-selector-attr">[type=normal]</span> {
+   <span class="hljs-attribute">font-style</span>: normal;
+   <span class="hljs-attribute">font-weight</span>: normal;
+}
+</code></pre>
+</blockquote>
+
+            
+            
+        </body>
+        </html>
